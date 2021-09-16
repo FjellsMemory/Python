@@ -18,7 +18,7 @@ strlist.sort()
 print(strlist)
 print("Nice one.  Here's the list alphabetical.")
 print("Continue to enter new terms.")
-print("Watch how they insert themselves into their rightful place.")
+print("Watch how they insert themselves into their alphabetical place.")
 input3 = input("Go head, son (when finished enter 'Done'):  ")
 while input3 != "Done":
     elem = input3.lower()
