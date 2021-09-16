@@ -1,9 +1,11 @@
 from sys import argv
 # read the WYSS section for how to run this
-script, dude, get, fucked, gonads = argv
+homey, these, are, my, variables = argv
 
-print("The script is called:", script)
-print("Your first variable is:", dude)
-print("Your second variable is:", get)
-print("Your third variable is:", fucked)
-print("Your fourth variable is:", gonads)
+print("The script is called: ", homey, "so input your name:", end= " ")
+input1 = input()
+print("Your first variable is:", int(these))
+print("Your second variable is:", are)
+print("Your third variable is:", my)
+print("Your fourth variable is:", variables)
+print(type(these))
