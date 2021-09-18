@@ -11,8 +11,7 @@ while input2 != "Done":
     input2 = input("Keep going:  ")
 low_strlist = []
 for i in strlist:
-    elem = i.lower()
-    low_strlist.append(elem)
+    low_strlist.append(i.lower())
 strlist = low_strlist
 strlist.sort()
 print(strlist)
