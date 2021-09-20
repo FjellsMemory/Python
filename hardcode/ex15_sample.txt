@@ -1,3 +1,7 @@
 huge win for me.
 can hardly believe my fortune.
 you know i just won the lotto.
+
+okay now i'm editing directly in atom.
+and we're seeing if the .git is active
+even if i'm offline.  :)
