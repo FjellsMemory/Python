@@ -15,7 +15,7 @@ print(txt.read())
 
 '''
 here we go through the whole process all over again, this time however
-we don't have the filename from an argv argument but from a user prompt pass
+we don't have the filename from an argv argument but from a input() call
 '''
 
 print("Type the filename again:")
@@ -27,3 +27,6 @@ print(txt_again.read())
 
 txt.close()
 txt_again.close()
+
+with open("ex15_example.txt", "w") as edit:
+    edit.write("can't believe it's this simple.\n")
