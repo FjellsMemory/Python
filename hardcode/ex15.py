@@ -29,4 +29,4 @@ txt.close()
 txt_again.close()
 
 with open("ex15_sample.txt", "w") as edit:
-    edit.write("can't believe it's this simple.\n")
+    edit.write("brand new text update to appear in PyCharm pls.\n")
