@@ -1,2 +1,1 @@
-okay next attempt via shell from terminal in pycharm.
-don't forget if it worked or not.
+can't believe it's this simple.
