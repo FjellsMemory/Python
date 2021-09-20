@@ -1,5 +1,2 @@
-This is stuff I typed into a file
-It is really cool stuff.
-Lots and lots of fun to have in here.
-
-to be honest, a little text from the homeboy would do us better than you could ever imagine.  not even joking.  waiting for the gm from Sirush so i can bust in like a boss with the rejoinder Giddy Malapropisms.  
+okay i'm actually writing to txt file from in python shell now.
+A cool development, for sure.
