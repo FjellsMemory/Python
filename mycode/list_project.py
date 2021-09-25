@@ -9,19 +9,13 @@ input2 = input("Keep going:  ")
 while input2 != "Done":
     strlist.append(input2)
     input2 = input("Keep going:  ")
-<<<<<<< HEAD
-low_strlist = [x.lower() for x in strlist] # use of LIST COMPREHENSION!!!
-=======
-low_strlist = []
-for i in strlist:
-    low_strlist.append(i.lower())
->>>>>>> 51873c9f0cbb649328fc78823508a4b0f865d04d
+low_strlist = [x.lower() for x in strlist] # List Comprehension!!!
 strlist = low_strlist
 strlist.sort()
 print(strlist)
 print("Nice one.  Here's the list alphabetical.")
 print("Continue to enter new terms.")
-print("Watch how they insert themselves into their alphabetical place.")
+print("Watch how they insert themselves into their rightful place.")
 input3 = input("Go head, son (when finished enter 'Done'):  ")
 while input3 != "Done":
     elem = input3.lower()
