@@ -9,7 +9,13 @@ input2 = input("Keep going:  ")
 while input2 != "Done":
     strlist.append(input2)
     input2 = input("Keep going:  ")
+<<<<<<< HEAD
 low_strlist = [x.lower() for x in strlist] # use of LIST COMPREHENSION!!!
+=======
+low_strlist = []
+for i in strlist:
+    low_strlist.append(i.lower())
+>>>>>>> 51873c9f0cbb649328fc78823508a4b0f865d04d
 strlist = low_strlist
 strlist.sort()
 print(strlist)
