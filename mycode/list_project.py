@@ -9,10 +9,7 @@ input2 = input("Keep going:  ")
 while input2 != "Done":
     strlist.append(input2)
     input2 = input("Keep going:  ")
-low_strlist = []
-for i in strlist:
-    elem = i.lower()
-    low_strlist.append(elem)
+low_strlist = [x.lower() for x in strlist] # use of LIST COMPREHENSION!!!
 strlist = low_strlist
 strlist.sort()
 print(strlist)
