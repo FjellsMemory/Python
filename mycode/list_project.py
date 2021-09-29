@@ -19,9 +19,10 @@ print("Continue to enter new terms.")
 print("Watch how they insert themselves into their rightful place.")
 input3 = input("Go head, son (when finished enter 'Done'):  ")
 while input3 != "Done":
-    elem = input3.lower()
-    strlist.append(elem)
+    strlist.append(input3.lower())
+    strlist = [elem.lower() for elem in strlist]
     strlist.sort()
+    strlist = [x.upper() if (strlist.index(x)%2 == 0) else x.lower() for x in strlist]
     print(strlist)
     input3 = input("Keep going (when finished enter 'Done'):  ")
 print("Great job, Mandingo!")
