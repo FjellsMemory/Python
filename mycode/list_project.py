@@ -26,3 +26,5 @@ while input3 != "Done":
     print(strlist)
     input3 = input("Keep going (when finished enter 'Done'):  ")
 print("Great job, Mandingo!")
+
+#  adding extra text here just to test .git push to GitHub
