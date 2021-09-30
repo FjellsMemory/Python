@@ -9,10 +9,9 @@ input2 = input("Keep going:  ")
 while input2 != "Done":
     strlist.append(input2)
     input2 = input("Keep going:  ")
-low_strlist = [x.lower() for x in strlist] # List Comprehension!!!
-low_strlist.sort()
-mix_strlist = [x.upper() if (low_strlist.index(x)%2 == 0) else x.lower() for x in low_strlist]
-strlist = mix_strlist
+strlist = [x.lower() for x in strlist] # List Comprehension!!!
+strlist.sort()
+strlist = [x.upper() if (strlist.index(x)%2 == 0) else x.lower() for x in strlist]
 print(strlist)
 print("Nice one.  Here's the list alphabetical.")
 print("Continue to enter new terms.")
