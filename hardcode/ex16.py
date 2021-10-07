@@ -31,5 +31,5 @@ print("And finally, we close it.")
 target.close()
 '''
 
-with txt as open(filename, "w"):
+with open(filename, "w") as txt:
     txt.write(f"{line1}\n{line2}\n{line3}\n")
