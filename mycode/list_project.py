@@ -21,7 +21,7 @@ while input3 != "Done":
     strlist.append(input3.lower())
     strlist = [elem.lower() for elem in strlist]
     strlist.sort()
-    strlist = [x.upper() if (strlist.index(x)%2 == 0) else x.lower() for x in strlist]
+    strlist = [x.upper() if (strlist.index(x)%2 == 0) else x.lower(x) for x in strlist]
     print(strlist)
     input3 = input("Keep going (when finished enter 'Done'):  ")
 print("Great job, Mandingo!")
