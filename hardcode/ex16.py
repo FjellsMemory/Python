@@ -11,8 +11,8 @@ input("?")
 print("Opening the file...")
 target = open (filename, "w")
 
-print("Truncating the file.  See ya!")
-target.truncate()
+#print("Truncating the file.  See ya!")
+#target.truncate()
 
 print("Now I'm going to ask you for three lines.")
 
