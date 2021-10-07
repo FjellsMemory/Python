@@ -1,5 +1,5 @@
 '''
-This is my own variation on the ex15.py exercise, where I actually replace the text file's contents both via argv AND user input.
+This is my own variation on the ex15.py exercise, where I replace the text file's contents both via argv AND user input.
 '''
 
 from sys import argv
