@@ -14,7 +14,7 @@ def rewind(f):
 # "cursor" just happens to be.  in this case, f.seek(0) was called
 # beforehand, and so the cursor was at line 1
 def print_a_line(line_count, f):
-    print(line_count, f.readline())
+    print(line_count, f.readline(), end = "")
 
 current_file = open(input_file)
 
