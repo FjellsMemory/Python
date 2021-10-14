@@ -33,6 +33,8 @@ else:
 yesno = input(f"Want to tweak {tempname}'s powerlevel? (y/n?): ")
 if yesno.lower() == "y":
     userobj.set_pl(int(input("New powerlevel?:  ")))
+    # above i wanted to get user input into the object without the creation
+    # of new variables.  i did it by nesting -> function((()))
     userobj.pltest()
 else:
     pass
