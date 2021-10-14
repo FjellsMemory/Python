@@ -1,7 +1,13 @@
-class Homeboi:
+class Cheetah:
     def __init__(self, name, powerlevel):
         self.name = name
         self.powerlevel = powerlevel
+
+    def print_self(self):
+        selflist = []
+        selflist.append(self.name)
+        selflist.append(self.powerlevel)
+        print(" | ".join(str(x) for x in selflist))
 
     def pltest(self):
         if self.powerlevel > 9000:
@@ -12,18 +18,26 @@ class Homeboi:
     def set_pl(self, pl):
         self.powerlevel = pl
 
+class Homeboi(Cheetah):
+    def __init__(self, name, powerlevel, sweetnesslvl):
+        super().__init__(name, powerlevel)
+        self.sweetnesslvl = sweetnesslvl
 
-Jeff = Homeboi("Jeff", 9001)
-inst = 'Jeff = Homeboi("Jeff", 9001)'
+    def swltest(self):
+        return self.sweetnesslvl
 
-print(f"Creating a Homboi 'Jeff' as follows: '{inst}'")
+
+Jeff = Homeboi("Jeff", 9001, 3560)
+'''
+print(f"Creating a Homboi 'Jeff' as follows: {Jeff}")
 print("Performing powerlevel test on Jeff...\n")
 Jeff.pltest()
 
 print("\nNow create your own Homeboi...")
 tempname = input("Give your Homeboi a name:  ")
 temppl = int(input("Annnnnd a power level:  "))
-userobj = Homeboi(tempname, temppl)
+tempswlvl = int(input("Annnnnd a sweetness level:  "))
+userobj = Homeboi(tempname, temppl, tempswlvl)
 
 yesno = input(f"Want to check {tempname}'s powerlevel? (y/n?): ")
 if yesno.lower() == "y":
@@ -38,4 +52,6 @@ if yesno.lower() == "y":
     userobj.pltest()
 else:
     pass
-print(userobj.name, userobj.powerlevel)
+print(userobj.name, userobj.powerlevel, userobj.sweetnesslvlevel)
+'''
+Jeff.print_self()
