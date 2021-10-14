@@ -5,7 +5,7 @@ class Homeboi:
 
     def pltest(self):
         if self.powerlevel > 9000:
-            print(f"{self.name}'s power level is over 9000!")
+            print(f"Fuck me!  {self.name}'s power level is over 9000!")
         else:
             print(f"{self.name}'s power level is only {self.powerlevel}")
 
