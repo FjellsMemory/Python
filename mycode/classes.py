@@ -3,11 +3,10 @@ class Cheetah:
         self.name = name
         self.powerlevel = powerlevel
 
-    def print_self(self):
+    def get_atts(self) -> str:
         selflist = []
-        selflist.append(self.name)
-        selflist.append(self.powerlevel)
-        print(" | ".join(str(x) for x in selflist))
+        selflist = [self.name, self.powerlevel]
+        return " | ".join(str(x) for x in selflist)
 
     def pltest(self):
         if self.powerlevel > 9000:
@@ -26,10 +25,16 @@ class Homeboi(Cheetah):
     def swltest(self):
         return self.sweetnesslvl
 
+    def get_atts(self) -> str:
+        selflist = [self.name, self.powerlevel, self.sweetnesslvl]
+        return " | ".join(str(x) for x in selflist)
+
 
 Jeff = Homeboi("Jeff", 9001, 3560)
-'''
-print(f"Creating a Homboi 'Jeff' as follows: {Jeff}")
+
+
+print(f"Creating a Homboi 'Jeff' as follows: {Jeff.get_atts()}\n")
+print(f"And now just his Cheetah attributes: {Cheetah.get_atts(Jeff)}")
 print("Performing powerlevel test on Jeff...\n")
 Jeff.pltest()
 
@@ -52,6 +57,6 @@ if yesno.lower() == "y":
     userobj.pltest()
 else:
     pass
-print(userobj.name, userobj.powerlevel, userobj.sweetnesslvlevel)
-'''
-Jeff.print_self()
+print(userobj.name, userobj.powerlevel, userobj.sweetnesslvl)
+
+Jeff.get_atts()
