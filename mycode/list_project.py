@@ -27,3 +27,5 @@ while input3.lower() != "done":
 print("Great job, Mandingo!")
 
 #  adding extra text here just to test .git push to GitHub
+
+# here's a cheeky change in VS Code
