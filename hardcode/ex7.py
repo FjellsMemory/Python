@@ -26,3 +26,5 @@ end13 = "r"
 
 print(end1 + end2 + end3 + end4 + end5 + end6 + end7, end = " ") # concants all the disaparate letters, ends with a space, tho i never saw that b4
 print(end8 + end9 + end10 + end11 + end12 + end13)
+
+print(end1, end2, end3, end4, end5, end6, end7)
