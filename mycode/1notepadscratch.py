@@ -12,3 +12,6 @@ print(f"res(c) ist {type(resc)}")
 
 resd = 6 * round(2.1, 1) // 1
 print(f"res(d) ist {type(resd)}")
+
+res = input("do it: ")
+print(type(res))
