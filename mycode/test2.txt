@@ -1,0 +1,2 @@
+"python.linting.pycodestyleArgs": [
+        "--ignore=W292,E501,E704,W503,W504"
