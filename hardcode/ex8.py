@@ -1,5 +1,6 @@
 formatter = "{} {} {} {}"
 
+print(formatter)
 print(formatter.format(1, 2, 3, 4))
 print(formatter.format("one", "two", "three", "four"))
 print(formatter.format(True, False, False, True))
@@ -13,3 +14,5 @@ print(formatter.format(
 
 input1 = "fuck yeah"
 print("F-string test is {}".format(input1))
+
+print("test on the fly with {}".format("Christ"))
