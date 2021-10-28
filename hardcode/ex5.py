@@ -1,7 +1,7 @@
 name = "Dustin L. Gould"
-age = 45 # not a lie
-height = 72 # inches
-weight = 170 # lbs
+age = 45  # not a lie
+height = 72  # inches
+weight = 170  # lbs
 eye_color = "green"
 teeth_color = "white"
 hair_color = "red"
