@@ -1,3 +1,5 @@
+"""Learning to use end= in a string."""
+
 print("How old are you?", end=' ')
 age = input()
 print("How tall are you?", end=' ')

@@ -1,3 +1,5 @@
+r"""Learning the \ character."""
+
 tabby_cat = "\tI'm tabbed in."
 persian_cat = "i'm split\non a line."
 backslash_cat = "I'm \\ a \\ cat."""

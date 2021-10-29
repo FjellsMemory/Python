@@ -1,3 +1,5 @@
+r"""Learning to work with \n."""
+
 # Here's some new strange stuff, remember type it exactly
 
 days = "Mon Tue Wed Thus Fri Sat Sun"
