@@ -1,3 +1,5 @@
+"""Learning to use "{}{}"."""
+
 formatter = "{}{}{}{}"
 
 print(formatter)
@@ -17,4 +19,6 @@ print(formatter.format(
 input1 = "fuck yeah"
 print("F-string test is {}".format(input1))
 
+# the next line uses the .foramt method on a string that
+# has no name - it isn't a variable.
 print("test on the fly with {}".format("Christ"))

@@ -1,3 +1,5 @@
+"""Learning f-strings."""
+
 types_of_people = 10   # the binary joke in full right here
 x = f"There are {types_of_people} types of people."  # f string stored in var x
 
