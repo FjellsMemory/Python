@@ -2,7 +2,7 @@
 
 
 def crunch(danum: int) -> list:
-    """Turn basis-10 int into a basis-16 int list."""
+    """Turn base-10 int into a base-16 int list."""
     qlist = []
     while danum != 0:
         qlist.insert(0, danum % 16)
@@ -11,7 +11,7 @@ def crunch(danum: int) -> list:
 
 
 def translate(alist: list) -> str:
-    """Turn basis-16 int list into a proper hex str."""
+    """Turn base-16 int list into a proper hex str."""
     for elem in alist:
         if elem == 10:
             alist[alist.index(elem)] = "a"
