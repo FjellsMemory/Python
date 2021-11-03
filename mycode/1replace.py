@@ -17,8 +17,8 @@ print("Okay, homeboy, here's a list with 5 elements")
 print(" | ".join(str(x) for x in mylist3)) # present list WITHOUT BRACKETS!!
 
 # NOT ONLY DID I PRESENT THE LIST WITHOUT BRACKETS, BUT ALSO BEING SEPARATED
-# BY A DASH (-) WITH SPACES ON BOTH SIDES.  THIS WAS DONE WITH THE string.join
-# METHOD AS FOLLOWS:  print(" - ".join(str(x) for x in mylist3))
+# BY A DASH (|) WITH SPACES ON BOTH SIDES.  THIS WAS DONE WITH THE string.join
+# METHOD AS FOLLOWS:  print(" | ".join(str(x) for x in mylist3))
 
 input1 = input("Go ahead and type a new element:  ") # replacement input
 mod_text = "{}???  Can't believe you chose {}!" # elite use of format text
@@ -36,7 +36,10 @@ matches something in the original list EXACTLY vis a vis spelling.  the next
 section in one fell swoop does the comparing and replacing in 3 lines, 44-46.
 it's parsimonious as fuck.  the range() and len() functions nested as they
 are i indeed found online, but it is the least interesting part of the second
-section.
+section.  Annnnnd now all that's moot cause i rewrote the iteration process.  
+It's not worlds apart, but uses a for loop to go through mylist3 item by item, 
+converting each one to a string as it does, compare it to user input, and if
+a match, grabs the items index number and replaces it then and there via it.
 '''
 
 while match not in str(mylist3):
@@ -44,9 +47,18 @@ while match not in str(mylist3):
     print(" | ".join(str(x) for x in mylist3))
     match = input("Try again:  ")
 
+"""
 for i in range(len(mylist3)):
     if str(mylist3[i]) == match:
         mylist3[i] = input1
+        print("I just made the change - check this shit... \n")
+"""
+# rewriting above loop just for practice - boss move, works.  list.index(item)
+
+for i in mylist3:
+    if str(i) == match:
+        ind = mylist3.index(i)
+        mylist3[ind] = input1
         print("I just made the change - check this shit... \n")
 
 print(" | ".join(str(x) for x in mylist3))
