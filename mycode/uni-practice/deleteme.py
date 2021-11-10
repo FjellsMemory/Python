@@ -3,7 +3,7 @@ from numbers import Number
 from typing import Sequence
 
 
-def product(xs: Sequence[Number]):
+def product(xs: Sequence) -> Number:
     """Eff yer mom."""
     result = 1
     for x in xs:
@@ -11,9 +11,9 @@ def product(xs: Sequence[Number]):
     return result
 
 
-def fact(n: int) -> int:
+def fact(n: int) -> Number:
     """Get bent."""
-    return product(range(1, n+1))
+    return product(range(1, n + 1))
 
 
 def Dondlsfact(n: int) -> int:
