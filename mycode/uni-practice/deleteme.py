@@ -26,5 +26,5 @@ def Dondlsfact(n: int) -> int:
     else:
         return n * Dondlsfact(n - 1)
 
-# RECURRSIVE FUNCTIONS are the silent twins to for loops, or even while loops.
+# RECURRSIVE FUNCTIONS are the silent partners of for loops, or even while loops.
 # and they are sexy as fuuuuuuuuck
