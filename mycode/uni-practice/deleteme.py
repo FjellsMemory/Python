@@ -1,4 +1,4 @@
-"""Just another in a long line of deletable scratches - yet they're all cool."""
+"""Another in a long line of deletable scratches - yet they're all cool."""
 from numbers import Number
 from typing import Sequence
 
@@ -25,3 +25,6 @@ def Dondlsfact(n: int) -> int:
         return 1
     else:
         return n * Dondlsfact(n - 1)
+
+# RECURRSIVE FUNCTIONS are the silent twins to for loops, or even while loops.
+# and they are sexy as fuuuuuuuuck
