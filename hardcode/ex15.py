@@ -2,7 +2,7 @@
 from sys import argv
 
 # define argv variables, script always being the first
-script, filename = argv
+script, filename, filename2 = argv
 
 # def var txt, which receives .txt file from open()
 txt = open(filename)
@@ -11,7 +11,8 @@ txt = open(filename)
 print(f"Here's your file {filename}:")
 # .read() method of file class (i guess) "reads" contents of txt filename
 # print() of course explicitly prints those contents out
-print(txt.read())
+readtextobject = txt.read()
+print(readtextobject)
 
 '''
 here we go through the whole process all over again, this time however
@@ -28,5 +29,8 @@ print(txt_again.read())
 txt.close()
 txt_again.close()
 
-with open("ex15_sample.txt", "w") as edit:
-    edit.write("brand new text update to appear in PyCharm pls.\n")
+with open(f"{filename2}", "w") as edit:
+    edit.write("this text is getting written rn to ex15_sample.txt.\n")
+
+edittxt = open(f"{filename2}")
+print(edittxt.read())
