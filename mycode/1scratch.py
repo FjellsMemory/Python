@@ -32,3 +32,22 @@ def check_for_3(tup: tuple) -> tuple:
         if n % 3 == 0:
             tup_of_3s = tup_of_3s + [n]
     return tuple(tup_of_3s)
+
+
+def poly_add(p: list, q: list) -> list:
+    maxlen = max(len(p), len(q))
+    result = []
+    for i in range(maxlen):
+        result = result + [safe_index(p, i, 0) + safe_index(q, i, 0)]
+    return result
+
+
+def safe_index(p: list, i: int, d: int) -> int:
+    return p[i] if i < len(p) else d
+
+
+assert ( poly_add ([] , []) == [])
+assert ( poly_add ([42] , []) == [42])
+assert ( poly_add ([] , [11]) == [11])
+assert ( poly_add ([1 ,2 ,3] , [4 ,3 ,2 ,5]) == [5 ,5 ,5 ,5])
+
