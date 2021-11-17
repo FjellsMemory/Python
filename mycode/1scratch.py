@@ -1,3 +1,6 @@
+"""A mishmash of the universe, right here."""
+from dataclasses import dataclass
+
 
 """
 list = [2, 3, 4, 5]
@@ -25,6 +28,7 @@ if __name__ == "__main__":
     strictly_positive(float(inp))
 '''
 
+
 def check_for_3(tup: tuple) -> tuple:
     """Take tuple and return tuple only with mod 3 values."""
     tup_of_3s = []
@@ -35,6 +39,7 @@ def check_for_3(tup: tuple) -> tuple:
 
 
 def poly_add(p: list, q: list) -> list:
+    """Eff yo mama."""
     maxlen = max(len(p), len(q))
     result = []
     for i in range(maxlen):
@@ -43,6 +48,7 @@ def poly_add(p: list, q: list) -> list:
 
 
 def safe_index(p: list, i: int, d: int) -> int:
+    """Eff yo mama."""
     return p[i] if i < len(p) else d
 
 
@@ -50,3 +56,10 @@ assert (poly_add([], []) == [])
 assert (poly_add([42], []) == [42])
 assert (poly_add([], [11]) == [11])
 assert (poly_add([1, 2, 3], [4, 3, 2, 5]) == [5, 5, 5, 5])
+
+@dataclass
+class Article:
+    """Class should represent a supermarket article with name and price."""
+
+    name: str
+    price: float
