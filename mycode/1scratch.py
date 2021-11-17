@@ -46,8 +46,7 @@ def safe_index(p: list, i: int, d: int) -> int:
     return p[i] if i < len(p) else d
 
 
-assert ( poly_add ([] , []) == [])
-assert ( poly_add ([42] , []) == [42])
-assert ( poly_add ([] , [11]) == [11])
-assert ( poly_add ([1 ,2 ,3] , [4 ,3 ,2 ,5]) == [5 ,5 ,5 ,5])
-
+assert (poly_add([], []) == [])
+assert (poly_add([42], []) == [42])
+assert (poly_add([], [11]) == [11])
+assert (poly_add([1, 2, 3], [4, 3, 2, 5]) == [5, 5, 5, 5])
