@@ -1,4 +1,9 @@
+"""You don't hear much about my charity work and it's because I don't do any."""
+
+
 class Cheetah:
+    """Cheetah class has name and powerlevel, and 3 methods."""
+
     def __init__(self, name, powerlevel):
         self.name = name
         self.powerlevel = powerlevel
@@ -17,7 +22,10 @@ class Cheetah:
     def set_pl(self, pl):
         self.powerlevel = pl
 
+
 class Homeboi(Cheetah):
+    """Homeboi class takes Cheetah and adds sweetnesslvl."""
+
     def __init__(self, name, powerlevel, sweetnesslvl):
         super().__init__(name, powerlevel)
         self.sweetnesslvl = sweetnesslvl
