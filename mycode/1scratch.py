@@ -57,6 +57,8 @@ assert (poly_add([42], []) == [42])
 assert (poly_add([], [11]) == [11])
 assert (poly_add([1, 2, 3], [4, 3, 2, 5]) == [5, 5, 5, 5])
 
+
+# i guess if you import dataclass from dataclasses, you don't need init func!!!
 @dataclass
 class Article:
     """Class should represent a supermarket article with name and price."""
