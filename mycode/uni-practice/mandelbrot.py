@@ -74,4 +74,4 @@ def render_mandelbrot(
 if __name__ == "__main__":
     assert mandelbrot(0.5, 50) == 5
     assert mandelbrot(0.5, 4) == 4
-    render_mandelbrot(-0.7 + 0.6j, -0.5 + 0.7j, 900, 600, 50, 'mandel1.jpg')
+    render_mandelbrot(-0.7 + 0.6j, -0.5 + 0.7j, 6000, 4000, 50, 'mandel1.jpg')
