@@ -2,6 +2,7 @@
 from math import isclose
 nums = int | float
 
+
 def average(mylist: list[nums]) -> nums:
     """Do bullshit."""
     sum = 0
