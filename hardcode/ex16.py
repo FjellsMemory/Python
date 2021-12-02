@@ -9,10 +9,10 @@ print("If you do want that, hit RETURN.")
 input("?")
 
 print("Opening the file...")
-target = open (filename, "w")
+target = open(filename, "w")
 
-#print("Truncating the file.  See ya!")
-#target.truncate()
+# print("Truncating the file.  See ya!")
+# target.truncate()
 
 print("Now I'm going to ask you for three lines.")
 
@@ -23,7 +23,8 @@ line3 = input("line3:  ")
 print("I'm going to write these to the file.")
 '''
 ###
-i'm now going to attempt to rewrite the lines below, which came from the exercise, with my own understanding of a WITH statement for text file editing
+i'm now going to attempt to rewrite the lines below, which came from the
+exercise, with my own understanding of a WITH statement for text file editing
 ###
 target.write(f"{line1}\n{line2}\n{line3}\n")
 
