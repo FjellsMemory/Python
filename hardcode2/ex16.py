@@ -4,16 +4,20 @@ with open(path, 'r') as x:
     print(x.read())
 
 with open(path, 'a') as x:
-    x.write("\n" + input("Add more txt to da effin file: > "))
+    while True:
+        usrtxt = (input("Add more txt to da file: (or type 'quit')> "))
+        if usrtxt != "quit":
+            x.write("\n" + usrtxt)
+        else:
+            break
 
 print("Your txt has been added... look:")
 with open(path, 'r') as x:
     print(x.read())
 
-ans = input("\nNow da real question:  do ya wanna delete this file? (y or n) ")
+ans = input("\n" + "Now da real question:  wanna delete this file? (y or n) ")
 if ans.lower() == "y":
-    with open(path, 'w')\
-            as x:
+    with open(path, 'w') as x:
         x.truncate()
 else:
     pass
