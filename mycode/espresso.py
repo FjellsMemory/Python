@@ -33,6 +33,7 @@ def define_bev(bev: Bev) -> Bev:
     return bev
 
 
+bev_list = []
 dingo_list = [Bev(name='Esp', price=1.8, esp_num=1, ppe=1.48),
               Bev(name='Dbl Esp', price=3.2, esp_num=2, ppe=1.44),
               Bev(name='Homeboi Latte', price=4.5, esp_num=4, ppe=1.04),
@@ -41,7 +42,6 @@ dingo_list = [Bev(name='Esp', price=1.8, esp_num=1, ppe=1.48),
 
 if __name__ == "__main__":
 
-    bev_list = []
     while True:  # iterative creation of new drinks, pack into list
         ans = input("\nCreate drink ((y) or (n)):  ")
         if ans.lower() == "n":
@@ -51,7 +51,6 @@ if __name__ == "__main__":
             bev_list.append(define_bev(bev))
     ans_two = input("Import list of dranks ((y) or (n)):  ")
     if ans_two.lower() == "y":
-        print("i tried importing dingo list")
         bev_list.extend(dingo_list)
 
     cheapest_drank = bev_list[0]
