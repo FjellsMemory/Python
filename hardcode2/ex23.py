@@ -5,7 +5,7 @@ script, encoding, error = sys.argv  # encoding still opaque, as is error
 
 
 def main(language_file, encoding, errors):
-    line = language_file.readline()  # okay, 
+    line = language_file.readline()  # okay,
 
     if line:
         print_line(line, encoding, errors)
