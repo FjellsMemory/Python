@@ -27,23 +27,23 @@ main(languages, encoding, error)
 
 """Small history lesson in encoding, ASCII is 8-bit encoding, only works for
 English because of 256 possibilities - each letter gets a binary number between
-0 and 255 so 00000000 - 11111111.  Unicode was the world's solution and is 
+0 and 255 so 00000000 - 11111111.  Unicode was the world's solution and is
 32-bit but thats 4 billion characters and there is a lot of wasted space.  The
 smart solution is to encode most shit in 8-bit and then jump out to higher
 orders (16- or 32-bit) where needed.  UTF-8, Universal Transformation Format.
 
+here's a string of raw bytes (the b is for bytes):
 b'\xe6\x96\x87\xe8\xa8\x80'
 
-here's a string of raw bytes for example (the b is for bytes).  what table of
-characters do you want to use to decode this string of bytes?  how's about the
-UTF-8 table?  
+what table of characters do you want to use to decode this string of bytes?
+how's about the UTF-8 table?
 
-raw_bytes = b'\xe6\x96\x87\xe8\xa8\x80'
+raw_bytes = b'\xe6\x96\x87\xe8\xa8\x80'  # assign em to a variable
 now...
-raw_bytes.decode()
+raw_bytes.decode()  # python will default decode to utf-8, but you can specify
 boom - 文言
 it decoded the byte string using the UTF-8 table
-just like 
+just like
 '文言'.encode() gives you...
 b'\xe6\x96\x87\xe8\xa8\x80'
 
