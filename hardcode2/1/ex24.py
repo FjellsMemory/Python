@@ -43,6 +43,6 @@ print("We'd have {} beans, {} jars, and {} crates.".format(*formula))
 
 # all this makes sense - but i never saw that last move, where homie packed
 # three variables into one with formula = secret_formula(start_point)
-# this is a boss move and actually makes formula a tuple, i think
-# that itself is cool, but using (*formula) as an argument in the last line
-# was really a cool way to use all 3 variables it contained in an f-string
+# this is a boss move and actually makes formula a tuple, and after that
+# *forumla unpacks the tuple and feeds the contents like a generator to 
+# .format({} {} {})
