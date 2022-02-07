@@ -11,7 +11,7 @@ def main(language_file, encoding, errors):
 
 
 def print_line(line, encoding, errors):
-    next_lang = line.strip()  # all strip() does is remove \n from the line.
+    next_lang = line.strip()  # all strip() does is remove \n from the linec.
     raw_bytes = next_lang.encode(encoding, errors=errors)  # turn str to bytes
     cooked_string = raw_bytes.decode(encoding, errors=errors)  # and back
 
