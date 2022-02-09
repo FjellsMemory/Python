@@ -13,27 +13,46 @@ def fahrenheit_to_celsius(fahr_temp: float) -> float:
 
 def celsius_to_kelvin(cel_temp: float) -> float:
     """Convert cel_temp to kel_temp."""
-    return cel_temp
+    return cel_temp - 273.15
 
 
 def kelvin_to_celsius(kel_temp: float) -> float:
     """Convert kel_temp to cel_temp."""
-    return kel_temp
+    return kel_temp + 273.15
 
 
 def fahrenheit_to_kelvin(fahr_temp: float) -> float:
     """Convert fahr_temp to kel_temp."""
-    return fahr_temp
+    return celsius_to_kelvin(fahrenheit_to_celsius(fahr_temp))
 
 
 def kelvin_to_fahrenheit(kel_temp: float) -> float:
     """Convert kel_temp to fahr_temp."""
-    return kel_temp
+    return celsius_to_fahrenheit(kelvin_to_celsius(kel_temp))
+
 
 if __name__ == "__main__":
-    usr_temp = input("Enter source unit [C / F / K]: ")
-    usr_unit = input("Enter source value: ")
+    usr_unit = input("Enter source unit [C / F / K]: ")
+    usr_temp = float(input("Enter source value: "))
     conv_unit = input("Enter target unit [C / F / K]: ")
-    conv_temp = 0
+    conv_temp = "undefined"
+    if usr_unit == "C":
+        if conv_unit == "F":
+            conv_temp = celsius_to_fahrenheit(usr_temp)
+        elif conv_unit == "K":
+            conv_temp = celsius_to_kelvin(usr_temp)
 
-    print(f"{usr_temp} {usr_unit} corresponds to {conv_temp} {conv_unit}.")
+    if usr_unit == "F":
+        if conv_unit == "C":
+            conv_temp = fahrenheit_to_celsius(usr_temp)
+        elif conv_unit == "K":
+            conv_temp = fahrenheit_to_kelvin(usr_temp)
+
+    if usr_unit == "K":
+        if conv_unit == "C":
+            conv_temp = kelvin_to_celsius(usr_temp)
+        elif conv_unit == "F":
+            conv_temp = kelvin_to_fahrenheit(usr_temp)
+
+    print(f"{usr_temp} {usr_unit} corresponds to {round((float(conv_temp)), 2)}\
+ {conv_unit}.")
