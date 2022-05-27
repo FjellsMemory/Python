@@ -3,7 +3,7 @@
 from math import pi, sqrt
 
 
-def cone_area(height: float, radius: float) -> float:
+def cone_area(radius: float, height: float) -> float:
     """Take height and radius and calculate Mantelfläche."""
     r = radius
     h = height
