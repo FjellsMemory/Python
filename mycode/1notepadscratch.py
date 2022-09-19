@@ -1,3 +1,4 @@
+"""
 from math import log2
 resa = int(log2(64)) + 2 ** abs(1+1j)
 print(f"check me out!: {(abs(1+1j))}")
@@ -16,3 +17,10 @@ print(f"res(c) ist {type(resc)}")
 resd = 6 * round(2.1, 1) // 1
 print(f"check me out!: {6 * round(2.1, 1) // 1}")
 print(f"res(d) ist {type(resd)}")
+"""
+
+usrinp = input("Type anything: ")
+try:
+    float(usrinp)
+except:
+    print("You didn't type a number... bitch.")

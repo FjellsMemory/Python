@@ -1,4 +1,4 @@
-"""Script to find out which route is cheaper in the espresso bar."""
+"""Script to find out which drink is ultimately cheapest in the espresso bar."""
 from dataclasses import dataclass
 
 
@@ -8,7 +8,7 @@ class Bev():
 
     name: str = ""
     price: float = 0.0
-    esp_num: int = 1
+    esp_num: int = 0
     ppe: float = 0.0
 
 
@@ -23,34 +23,45 @@ def total_cost(pp_drink: float, esp_in_drink: int) -> float:
     return total
 
 
-def create_bev(bev: Bev) -> Bev:
+def define_bev(bev: Bev) -> Bev:
     """Add attributes to bev instance."""
     print("\nNew Drink...")
     bev.name = input("Name of drink: ")
     bev.price = float(input("It's price: "))
     bev.esp_num = int(input("Number of espressos in dis bev? "))
+    bev.ppe = round(total_cost(bev.price, bev.esp_num), 2)
     return bev
 
 
+bev_list = []
+dingo_list = [Bev(name='Esp', price=1.8, esp_num=1, ppe=1.48),
+              Bev(name='Dbl Esp', price=3.2, esp_num=2, ppe=1.44),
+              Bev(name='Homeboi Latte', price=4.5, esp_num=4, ppe=1.04),
+              Bev(name='Gravy Train', price=5.6, esp_num=3, ppe=1.76)]
+
+
 if __name__ == "__main__":
-    bev1, bev2 = Bev(), Bev()
 
-    bev1 = create_bev(bev1)
-    bev2 = create_bev(bev2)
+    while True:  # iterative creation of new drinks, pack into list
+        ans = input("\nCreate drink ((y) or (n)):  ")
+        if ans.lower() == "n":
+            break
+        else:
+            bev = Bev()
+            bev_list.append(define_bev(bev))
+    ans_two = input("Import list of dranks ((y) or (n)):  ")
+    if ans_two.lower() == "y":
+        bev_list.extend(dingo_list)
 
-    bev1.ppe = total_cost(bev1.price, bev1.esp_num)
-    bev2.ppe = total_cost(bev2.price, bev2.esp_num)
-    print("\n")
+    cheapest_drank = bev_list[0]
+    for x in bev_list:
+        if x.ppe < cheapest_drank.ppe:
+            cheapest_drank = x
+        else:
+            continue
 
-    print(f"Cost per esp in {bev1.name} = {bev1.ppe}")
-    print(f"Cost per esp in a {bev2.name} = {bev2.ppe}")
-
-    cheaper = min(bev1.ppe, bev2.ppe)
-    if cheaper == bev1.ppe:
-        cheaper_name = bev1.name
-    else:
-        cheaper_name = bev2.name
-
-    print(f"Do you know what this means?  Means {cheaper_name}s are cheaper in \
-the end.  And it's not even close.  I just used my prog skills and science to \
-keep cash in da wallet.  D'hear dat lads.  Da wallet.  Full.")
+    print(f"""
+Do you know what this means?  Means {cheapest_drank.name}s are cheapest in the
+end.  I just used my prog skills and science to keep cash in da wallet.  D'hear
+dat lads.  Da wallet.  Full.
+""")
